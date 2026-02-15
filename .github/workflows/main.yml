@@ -12,7 +12,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          submodules: false  
+          submodules: false  # 明确禁用子模块
+          # 新增：告诉 Git 不要递归检查子模块
+          filter: 'tree:0'
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
