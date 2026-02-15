@@ -13,8 +13,7 @@ jobs:
         with:
           fetch-depth: 0
           submodules: false  # 明确禁用子模块
-          # 新增：告诉 Git 不要递归检查子模块
-          filter: 'tree:0'
+          filter: 'tree:0'   # 告诉 Git 不要递归检查子模块
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
